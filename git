@@ -1,0 +1,482 @@
+stiven@stiven-Pc:~$ git --version
+git version 2.32.0
+stiven@stiven-Pc:~$ git config --global
+uso: git config [<opciones>]
+
+Ubicación del archivo configuración
+    --global              usar archivo de config global
+    --system              usar archivo de config del sistema
+    --local               usar archivo de config del repositorio
+    --worktree            usar un archivo de config por árbol de trabajo
+    -f, --file <carpeta>  usar archivo config especificado
+    --blob <blob-id>      leer config del objeto blob suministrado
+
+Acción
+    --get                 obtener valor: nombre [patrón de valor]
+    --get-all             obtener todos los valores: clave [patrón de valor]
+    --get-regexp          obtener valores para regexp: name-regex [value-pattern]
+    --get-urlmatch        obtener valor especifico para el URL: sección[.var] URL
+    --replace-all         reemplazar todas las variables coincidentes: nombre valor [valor-patrón]
+    --add                 agregar nueva variable: nombre valor
+    --unset               eliminar una variable: nombre [patrón de valor]
+    --unset-all           eliminar todas las coincidencias: nombre [patrón de valor]
+    --rename-section      renombrar sección: nombre-viejo nombre-nuevo
+    --remove-section      borrar una sección: nombre
+    -l, --list            listar todo
+    --fixed-value         use la igualdad de cadenas al comparar valores con 'patrón de valor'
+    -e, --edit            abrir el editor
+    --get-color           encontrar el color configurado: slot [default]
+    --get-colorbool       encontrar las opciones del color: slot [stdout-es-tty]
+
+Tipo
+    -t, --type <>         al valor se ha dado este tipo
+    --bool                valor es "true" o "false"
+    --int                 valor es un numero decimal
+    --bool-or-int         valor es --bool o --int
+    --bool-or-str         el valor es --bool o cadena
+    --path                valor es una ruta (archivo o nombre de directorio)
+    --expiry-date         valor es una fecha de expiración
+
+Otro
+    -z, --null            terminar valores con un byte NULL
+    --name-only           mostrar solo nombres de variables
+    --includes            respetar directivas include en la búsqueda
+    --show-origin         mostrar el origen de configuración (archivo, stdin, blob, comando)
+    --show-scope          mostrar el scope de la configuración (worktree, local, global, system, command)
+    --default <valor>     con --get, usa el valor por defecto cuando falta una entrada
+
+stiven@stiven-Pc:~$ git config --global user.name "Stiven Parada"
+stiven@stiven-Pc:~$ git config --global user.email stiven.parada@hotmail.com
+stiven@stiven-Pc:~$ git config --global core.editor "code --wait"
+stiven@stiven-Pc:~$ git config --global -e
+stiven@stiven-Pc:~$ git config --global core.autocrlf input
+stiven@stiven-Pc:~$ git config -h
+uso: git config [<opciones>]
+
+Ubicación del archivo configuración
+    --global              usar archivo de config global
+    --system              usar archivo de config del sistema
+    --local               usar archivo de config del repositorio
+    --worktree            usar un archivo de config por árbol de trabajo
+    -f, --file <carpeta>  usar archivo config especificado
+    --blob <blob-id>      leer config del objeto blob suministrado
+
+Acción
+    --get                 obtener valor: nombre [patrón de valor]
+    --get-all             obtener todos los valores: clave [patrón de valor]
+    --get-regexp          obtener valores para regexp: name-regex [value-pattern]
+    --get-urlmatch        obtener valor especifico para el URL: sección[.var] URL
+    --replace-all         reemplazar todas las variables coincidentes: nombre valor [valor-patrón]
+    --add                 agregar nueva variable: nombre valor
+    --unset               eliminar una variable: nombre [patrón de valor]
+    --unset-all           eliminar todas las coincidencias: nombre [patrón de valor]
+    --rename-section      renombrar sección: nombre-viejo nombre-nuevo
+    --remove-section      borrar una sección: nombre
+    -l, --list            listar todo
+    --fixed-value         use la igualdad de cadenas al comparar valores con 'patrón de valor'
+    -e, --edit            abrir el editor
+    --get-color           encontrar el color configurado: slot [default]
+    --get-colorbool       encontrar las opciones del color: slot [stdout-es-tty]
+
+Tipo
+    -t, --type <>         al valor se ha dado este tipo
+    --bool                valor es "true" o "false"
+    --int                 valor es un numero decimal
+    --bool-or-int         valor es --bool o --int
+    --bool-or-str         el valor es --bool o cadena
+    --path                valor es una ruta (archivo o nombre de directorio)
+    --expiry-date         valor es una fecha de expiración
+
+Otro
+    -z, --null            terminar valores con un byte NULL
+    --name-only           mostrar solo nombres de variables
+    --includes            respetar directivas include en la búsqueda
+    --show-origin         mostrar el origen de configuración (archivo, stdin, blob, comando)
+    --show-scope          mostrar el scope de la configuración (worktree, local, global, system, command)
+    --default <valor>     con --get, usa el valor por defecto cuando falta una entrada
+
+stiven@stiven-Pc:~$ 
+stiven@stiven-Pc:~$ ls
+ Descargas    Escritorio   Música       Público             snap
+ Documentos   Imágenes     Plantillas  'sdk install java'   Vídeos
+stiven@stiven-Pc:~$ pwd
+/home/stiven
+stiven@stiven-Pc:~$ cd Escritorio
+stiven@stiven-Pc:~/Escritorio$ cd workspace
+stiven@stiven-Pc:~/Escritorio/workspace$  pwd
+/home/stiven/Escritorio/workspace
+stiven@stiven-Pc:~/Escritorio/workspace$ ls
+stiven@stiven-Pc:~/Escritorio/workspace$ mkdir miweb
+stiven@stiven-Pc:~/Escritorio/workspace$ ls
+miweb
+stiven@stiven-Pc:~/Escritorio/workspace$ cd miweb
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: está sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, que suprimirán esta advertencia, llame a:
+ayuda: 
+ayuda: 	git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres comúnmente elegidos en lugar de 'maestro' son 'principal', 'troncal' y
+ayuda: 'desarrollo'. Se puede cambiar el nombre de la rama recién creada mediante este comando:
+ayuda: 
+ayuda: 	git branch -m <nombre>
+Inicializado repositorio Git vacío en /home/stiven/Escritorio/workspace/miweb/.git/
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ cd .git
+stiven@stiven-Pc:~/Escritorio/workspace/miweb/.git$ ls -a
+.  ..  branches  config  description  HEAD  hooks  info  objects  refs
+stiven@stiven-Pc:~/Escritorio/workspace/miweb/.git$ cd..
+cd..: orden no encontrada
+stiven@stiven-Pc:~/Escritorio/workspace/miweb/.git$ cd ,,
+bash: cd: ,,: No existe el archivo o el directorio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb/.git$ cd ..
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls -a
+.  ..  .git
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ code -.
+Warning: '' is not in the list of known options, but still passed to Electron/Chromium.
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ code  .
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	archivo1.txt
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add arhivo1.txt
+fatal: ruta especificada 'arhivo1.txt' no concordó con ninguna carpeta
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevo archivo:  archivo1.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevo archivo:  archivo1.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevo archivo:  archivo1.txt
+	nuevo archivo:  archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevo archivo:  archivo1.txt
+	nuevo archivo:  archivo2.txt
+
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificado:     archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+
+No hay commits todavía
+
+Cambios a ser confirmados:
+  (usa "git rm --cached <archivo>..." para sacar del área de stage)
+	nuevo archivo:  archivo1.txt
+	nuevo archivo:  archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "Commit inicial"
+[master (commit-raíz) 9840e7f] Commit inicial
+ 2 files changed, 2 insertions(+)
+ create mode 100644 archivo1.txt
+ create mode 100644 archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificado:     archivo2.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	modificado:     archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit
+[master 9a69a52] Agregando un chachito feliz
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+archivo1.txt  archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ rm archivo2.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add/rm <archivo>..." para actualizar a lo que se le va a hacer commit)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	borrado:        archivo2.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	borrado:        archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "ELiminando archivo 2"
+[master 5b401e7] ELiminando archivo 2
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git rm archivo1.txt 
+rm 'archivo1.txt'
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	borrado:        archivo1.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git restore --staged archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add/rm <archivo>..." para actualizar a lo que se le va a hacer commit)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	borrado:        archivo1.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git restore archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ mv archivo1.txt archivo.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ ls
+archivo.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add/rm <archivo>..." para actualizar a lo que se le va a hacer commit)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	borrado:        archivo1.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	archivo.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo1.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	renombrado:     archivo1.txt -> archivo.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "Renombrando archivo"
+[master f30b4b7] Renombrando archivo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename archivo1.txt => archivo.txt (100%)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git mv archivo.txt archivo1.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	renombrado:     archivo.txt -> archivo1.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "Devolviendo el nombre"
+[master efedfd8] Devolviendo el nombre
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename archivo.txt => archivo1.txt (100%)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	.env
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	.gitignore
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add .gitignore
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "agregando archivo gitignore"
+[master 6a9772c] agregando archivo gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificado:     .gitignore
+	modificado:     archivo1.txt
+
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+	archivo2.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status -s
+ M .gitignore
+ M archivo1.txt
+?? archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add .gitignore
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status -s
+M  .gitignore
+ M archivo1.txt
+?? archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status -s
+M  .gitignore
+ M archivo1.txt
+A  archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo1.txt 
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status -s
+M  .gitignore
+M  archivo1.txt
+A  archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git commit -m "Mostrando Status corto"
+[master 2362f88] Mostrando Status corto
+ 3 files changed, 5 insertions(+), 2 deletions(-)
+ create mode 100644 archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status -s
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios no rastreados para el commit:
+  (usa "git add <archivo>..." para actualizar lo que será confirmado)
+  (usa "git restore <archivo>..." para descartar los cambios en el directorio de trabajo)
+	modificado:     archivo2.txt
+
+sin cambios agregados al commit (usa "git add" y/o "git commit -a")
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git diff
+diff --git a/archivo2.txt b/archivo2.txt
+index 030b241..821f8e9 100644
+--- a/archivo2.txt
++++ b/archivo2.txt
+@@ -1 +1,3 @@
+-chanchito feliz
+\ No newline at end of file
++chanchito feliz
++chanchito triste
++felipe
+\ No newline at end of file
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git archivo2.txt
+git: 'archivo2.txt'no es un comando de git. Mira 'git --help'.
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git add archivo2.txt
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git diff
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git diff --staged
+diff --git a/archivo2.txt b/archivo2.txt
+index 030b241..821f8e9 100644
+--- a/archivo2.txt
++++ b/archivo2.txt
+@@ -1 +1,3 @@
+-chanchito feliz
+\ No newline at end of file
++chanchito feliz
++chanchito triste
++felipe
+\ No newline at end of file
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git restore --staged <archivo>..." para sacar del área de stage)
+	modificado:     archivo2.txt
+
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git log
+commit 2362f88b2b222603358c22dce80c89091a43989c (HEAD -> master)
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 17:10:00 2022 -0500
+
+    Mostrando Status corto
+
+commit 6a9772c6eb7f9c9c591a1736a4b4d165dbae4206
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 17:07:00 2022 -0500
+
+    agregando archivo gitignore
+
+commit efedfd823747d08350d4282ff9d68b40c8fde521
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 17:03:44 2022 -0500
+
+    Devolviendo el nombre
+
+commit f30b4b7c1518f0a0f6c9174dd764ea11a9d6533d
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 17:02:25 2022 -0500
+
+    Renombrando archivo
+
+commit 5b401e79c42d397bbe29c97b84bb1b7a49be86bd
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 16:58:38 2022 -0500
+
+    ELiminando archivo 2
+
+commit 9a69a52909bbc21104220baf76d272dc7a7ff77c
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 16:56:27 2022 -0500
+
+    Agregando un chachito feliz
+
+commit 9840e7f98a7eea7c48b1ca696d48e2d88e837832
+Author: Stiven Parada <stiven.parada@hotmail.com>
+Date:   Mon Feb 21 16:55:17 2022 -0500
+
+    Commit inicial
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ git log --oneline
+2362f88 (HEAD -> master) Mostrando Status corto
+6a9772c agregando archivo gitignore
+efedfd8 Devolviendo el nombre
+f30b4b7 Renombrando archivo
+5b401e7 ELiminando archivo 2
+9a69a52 Agregando un chachito feliz
+9840e7f Commit inicial
+stiven@stiven-Pc:~/Escritorio/workspace/miweb$ 
